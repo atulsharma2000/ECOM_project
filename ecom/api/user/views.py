@@ -19,8 +19,8 @@ def generate_session_token(length=10):
     # for _ in range(length) this piece of the code will generate string which is 10 character long and i.e. our session token.
 
 
-@csrf_exempt                               
-def signin(request):                        #custom method for sign in Django-admin
+@csrf_exempt                                # here we used the decorator
+def signin(request):                        #custom method
     if not request.method == 'POST':
         return JsonResponse({'error': 'Send a post request with valid parameter.'})
 
